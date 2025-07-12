@@ -72,7 +72,7 @@ export default class App extends Component {
 
   render() {
     if (this.state.shouldThrowError) {
-      throw new Error('404');
+      throw new Error('This is a test error from the error button');
     }
 
     return (
@@ -89,9 +89,7 @@ export default class App extends Component {
         <CardList items={this.state.Item} isLoading={this.state.isLoading} />
         {this.state.notFound && <NotFound />}
         <button
-          onClick={() => {
-            this.setState({ shouldThrowError: true });
-          }}
+          onClick={() => this.setState({ shouldThrowError: true })}
           style={{
             position: 'fixed',
             bottom: '10px',

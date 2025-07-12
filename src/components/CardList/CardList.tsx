@@ -15,9 +15,16 @@ class CardList extends Component<CardListProps> {
         {this.props.isLoading ? (
           <Loader />
         ) : (
-          this.props.items.map((item) => (
-            <Card key={item.name} name={item.name} url={item.url} />
-          ))
+          this.props.items.map((item) => {
+            return (
+              <Card
+                key={item.name}
+                name={item.name}
+                url={item.sprites?.front_default}
+                description={item.url}
+              />
+            );
+          })
         )}
       </div>
     );
