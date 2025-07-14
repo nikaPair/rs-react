@@ -1,0 +1,16 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.search-container {
+  display: flex;
+  gap: 20px;
+}
+body {
+  background: #d53369;
+  background: -webkit-linear-gradient(to right, #cbad6d, #d53369);
+  background: linear-gradient(to right, #cbad6d, #d53369);
+}
